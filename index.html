@@ -15,18 +15,28 @@
 <body>
   <header class="header conteiner">
     <nav class="menu">
-      <ul>
+      <button data-menu="button" aria-controls="menu" aria-expanded="false">Menu</button>
+      <ul data-menu="list" id="menu">
         <li><a href="#animais">animais</a></li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li><a href="empresa.html">A Empresa</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="socios.html">Sócios</a></li>
+            <li><a href="investidores">Investidores</a></li>
+          </ul>
+        </li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contato">CONTATO</a></li>
-        <li><a href="#">DEV</a></li>
+        <li><a data-modal="abrir" href="login.html">LOGIN</a></li>
       </ul>
 
     </nav>
   </header>
   <section class='conteiner'>
-    <h1 class="titulo js-scroll" id="animais">Animais Fantásticos</h1>
-    <section class="animais sessao js-scroll">
+    <h1 class="titulo" id="animais" data-scroll="scroll">Animais Fantásticos</h1>
+    <section class="animais sessao" data-scroll="scroll">
       <ul class="animais-imgs">
         <li><img src="./img/imagem1.jpg" alt="Raposa"></li>
         <li><img src="./img/imagem2.jpg" alt="Esquilo"></li>
@@ -36,7 +46,7 @@
         <li><img src="./img/imagem6.jpg" alt="Leão"></li>
       </ul>
       <div class="animais-conteudo">
-        <div class="animais-texto">
+        <div class="animais-texto" data-anime="show-right">
           <h2 class="subititulo">RAPOSA</h2>
 
           <p> Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -46,7 +56,7 @@
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
 
         </div>
-        <div class="animais-texto">
+        <div class="animais-texto" data-anime="show-down">
           <h2 class="subititulo">ESQUILO</h2>
 
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
@@ -56,7 +66,7 @@
 
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</P>
         </div>
-        <div class="animais-texto">
+        <div class="animais-texto" data-anime="show-right">
           <h2 class="subititulo">URSO</h2>
           <P>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</P>
 
@@ -66,7 +76,7 @@
 
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</P>
         </div>
-        <div class="animais-texto">
+        <div class="animais-texto" data-anime="show-down">
           <h2 class="subititulo">LOBO</h2>
           <P>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</P>
 
@@ -76,7 +86,7 @@
 
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</P>
         </div>
-        <div class="animais-texto">
+        <div class="animais-texto" data-anime="show-right">
           <h2 class="subititulo">BABUINO</h2>
 
           <p> Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -86,7 +96,7 @@
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
 
         </div>
-        <div class="animais-texto">
+        <div class="animais-texto" data-anime="show-down">
           <h2 class="subititulo">LEÃO</h2>
           <p> Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
@@ -100,8 +110,16 @@
       </div>
 
     </section>
-    <h1 class="titulo js-scroll" id="faq">faq</h1>
-    <section class="faq js-scroll">
+
+    <h1 class="titulo" data-scroll="scroll">numeros</h1>
+    <section class="sessao numeros" data-scroll="scroll">
+      <div class="numeros-grid">
+
+      </div>
+
+    </section>
+    <h1 class="titulo" id="faq" data-scroll="scroll">faq</h1>
+    <section class="faq" data-scroll="scroll">
       <dl>
         <dt>Qual a idade dos animais?</dt>
         <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
@@ -113,21 +131,34 @@
         <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
       </dl>
     </section>
-    <h1 class="titulo js-scroll" id="contato">contato</h1>
-    <section class="contato sessao js-scroll">
-      <img src="./img/mapa.png" alt="Mapa">
+    <h1 class="titulo" id="contato" data-scroll="scroll">contato</h1>
+    <section class="contato sessao" data-scroll="scroll">
+      <img src="./img/mapa.png" alt="Mapa" data-tooltip aria-label="Endereço próximo ao estacionamento">
       <ul>
         <li>camaleplata@outlook.com</li>
         <li>+55 (21) 99999-9999</li>
         <li>Rua do Conde, nº 21</li>
         <li>Rio de Janeiro - RJ</li>
+        <li data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 8 às 18</li>
+        <li>Doe <span class="btc-preco">0</span> Bitcoint para nos ajudar! </li>
       </ul>
     </section>
     <div class="footer">Todos os direitos reservados.</div>
   </section>
+  <section class="modal-conteiner" data-modal="conteiner">
+    <div class="modal" data-modal="modal">
+      <button class="fechar" data-modal="fechar">X</button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+        <button type="submit">Entrar</button>
 
-
-  <script src="./js/script.js"></script>
+      </form>
+    </div>
+  </section>
+  <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>

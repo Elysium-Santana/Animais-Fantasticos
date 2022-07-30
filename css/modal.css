@@ -1,0 +1,75 @@
+.modal-conteiner {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background-color: #faf6ed;
+  padding: 40px;
+  gap: 20px;
+  border-radius: 5px;
+  border: 12px #fb5 solid;
+  box-shadow: 0 0 0 12px #e54;
+  position: relative;
+  max-width: 300px;
+  animation: modalAnimation 0.6s forwards;
+}
+
+.modal-conteiner.ativo {
+  display: flex;
+}
+
+.fechar {
+  border-radius: 50%;
+  background: #e54;
+  color: #faf6ed;
+  border: 8px #fb5 solid;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.modal label {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #e54;
+  display: block;
+  margin: 4px;
+}
+.modal input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 8px 4px;
+  box-sizing: border-box;
+}
+.modal button[type="submit"] {
+  padding: 12px 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: #e54;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+@keyframes modalAnimation {
+  from {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
