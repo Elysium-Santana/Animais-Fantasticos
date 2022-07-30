@@ -2,7 +2,7 @@ import ScrollSuave from "./modules/scroll-suave.js";
 import AcordeonList from "./modules/acordeon-list.js";
 import interactImages from "./modules/interacao-imagem.js";
 import Modal from "./modules/modal.js";
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdow-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initAnimaNumeros from "./modules/anima-numeros.js";
@@ -20,12 +20,12 @@ const modal = new Modal(
   '[data-modal="conteiner"]'
 );
 modal.init();
-
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
 scrollAnimado();
 
 interactImages();
 
-initTooltip();
 initDropDownMenu();
 initMenuMobile();
 initAnimaNumeros();

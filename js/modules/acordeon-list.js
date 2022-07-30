@@ -18,6 +18,7 @@ export default class AcordeonList {
     if (this.perguntaLista.length) {
       this.toggleAcordeon(this.perguntaLista[0]);
       this.addAcordeonList();
+      return this;
     }
   }
 }
