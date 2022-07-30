@@ -1,17 +1,23 @@
 // ==============ACORDEON LIST==============================
-export default function acordeonList() {
-  const perguntaLista = document.querySelectorAll(".faq dt");
-  const ativoString = "ativo";
-  perguntaLista[0].classList.add(ativoString);
-  perguntaLista[0].nextElementSibling.classList.add(ativoString);
-  if (perguntaLista.length) {
-    function clickPergunta(pergunta) {
-      this.classList.toggle(ativoString);
-      this.nextElementSibling.classList.toggle(ativoString);
-    }
+export default class AcordeonList {
+  constructor(list) {
+    this.perguntaLista = document.querySelectorAll(list);
+    this.ativoString = "ativo";
+  }
 
-    perguntaLista.forEach((perguntas) =>
-      perguntas.addEventListener("click", clickPergunta)
-    );
+  toggleAcordeon(item) {
+    item.classList.toggle(this.ativoString);
+    item.nextElementSibling.classList.toggle(this.ativoString);
+  }
+  addAcordeonList() {
+    this.perguntaLista.forEach((item) => {
+      item.addEventListener("click", () => this.toggleAcordeon(item));
+    });
+  }
+  init() {
+    if (this.perguntaLista.length) {
+      this.toggleAcordeon(this.perguntaLista[0]);
+      this.addAcordeonList();
+    }
   }
 }
