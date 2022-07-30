@@ -1,4 +1,4 @@
-import scrollSuave from "./modules/scroll-suave.js";
+import ScrollSuave from "./modules/scroll-suave.js";
 import scrollAnimado from "./modules/scroll-animado.js";
 import acordeonList from "./modules/acordeon-list.js";
 import interactImages from "./modules/interacao-imagem.js";
@@ -10,7 +10,8 @@ import initAnimaNumeros from "./modules/anima-numeros.js";
 import initFuncionamento from "./modules/horario-funcionamento.js";
 import initFetchAnimais from "./modules/fatch-animais.js";
 import initfetchBitcoint from "./modules/fetch-bitcoint.js";
-scrollSuave();
+const scrollSuave = new ScrollSuave(".menu a[href^='#']");
+scrollSuave.init();
 scrollAnimado();
 acordeonList();
 interactImages();
