@@ -7,8 +7,8 @@ import initDropDownMenu from "./modules/dropdow-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/horario-funcionamento.js";
 import fetchAnimais from "./modules/fatch-animais.js";
-import initfetchBitcoint from "./modules/fetch-bitcoint.js";
-import scrollAnimado from "./modules/scroll-animado.js";
+import fetchBitcoint from "./modules/fetch-bitcoint.js";
+import ScrollAnima from "./modules/scroll-animado.js";
 const scrollSuave = new ScrollSuave(".menu a[href^='#']");
 scrollSuave.init();
 const acordeonList = new AcordeonList(".faq dt");
@@ -21,13 +21,13 @@ const modal = new Modal(
 modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
-scrollAnimado();
-
+const scrollAnima = new ScrollAnima("[data-scroll]");
+scrollAnima.init();
 interactImages();
 
 initDropDownMenu();
 initMenuMobile();
 
 initFuncionamento();
-fetchAnimais("../../animaisapi.json", ".numeros-grid");
-initfetchBitcoint();
+fetchAnimais("./animaisapi.json", ".numeros-grid");
+fetchBitcoint("https://blockchain.info/ticker", ".btc-preco");
