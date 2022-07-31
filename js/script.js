@@ -3,7 +3,7 @@ import AcordeonList from "./modules/acordeon-list.js";
 import interactImages from "./modules/interacao-imagem.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initDropDownMenu from "./modules/dropdow-menu.js";
+import DropDownMenu from "./modules/dropdow-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/horario-funcionamento.js";
 import fetchAnimais from "./modules/fatch-animais.js";
@@ -25,7 +25,9 @@ const scrollAnima = new ScrollAnima("[data-scroll]");
 scrollAnima.init();
 interactImages();
 
-initDropDownMenu();
+const dropDownMenu = new DropDownMenu("[data-dropdown]");
+dropDownMenu.init();
+
 initMenuMobile();
 
 initFuncionamento();
