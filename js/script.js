@@ -5,7 +5,6 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdow-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
-import initAnimaNumeros from "./modules/anima-numeros.js";
 import initFuncionamento from "./modules/horario-funcionamento.js";
 import initFetchAnimais from "./modules/fatch-animais.js";
 import initfetchBitcoint from "./modules/fetch-bitcoint.js";
@@ -28,7 +27,7 @@ interactImages();
 
 initDropDownMenu();
 initMenuMobile();
-initAnimaNumeros();
+
 initFuncionamento();
 initFetchAnimais();
 initfetchBitcoint();
