@@ -193,7 +193,7 @@ li {
 }
 .js .faq dd.ativo {
   display: block;
-  animation: slideDown 0.6s forwards;
+  animation: slideDown 0.5s forwards;
 }
 .js [data-scroll="scroll"] {
   opacity: 0;

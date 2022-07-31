@@ -4,7 +4,7 @@ import interactImages from "./modules/interacao-imagem.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropDownMenu from "./modules/dropdow-menu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/horario-funcionamento.js";
 import fetchAnimais from "./modules/fatch-animais.js";
 import fetchBitcoint from "./modules/fetch-bitcoint.js";
@@ -28,7 +28,8 @@ interactImages();
 const dropDownMenu = new DropDownMenu("[data-dropdown]");
 dropDownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
 
 initFuncionamento();
 fetchAnimais("./animaisapi.json", ".numeros-grid");
