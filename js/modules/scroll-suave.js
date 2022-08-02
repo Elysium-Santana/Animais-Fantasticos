@@ -8,9 +8,10 @@ export default class ScrollSuave {
     }
     this.scrollToSection = this.scrollToSection.bind(this);
   }
+
   scrollToSection(event) {
-    this.preventDefault();
-    const href = this.getAttribute("href");
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
     section.scrollIntoView(this.options);
   }
@@ -19,6 +20,18 @@ export default class ScrollSuave {
       link.addEventListener("click", this.scrollToSection);
     });
   }
+  // scrollToSection(event) {
+  //     event.preventDefault();
+  //     const href = event.currentTarget.getAttribute('href');
+  //     const section = document.querySelector(href);
+  //     section.scrollIntoView(this.options);
+  //   }
+
+  //   addLinkEvent() {
+  //     this.linksInternos.forEach((link) => {
+  //       link.addEventListener('click', this.scrollToSection);
+  //     });
+  //   }
   init() {
     if (this.linksInternos.length) {
       this.addLinkEvent();
@@ -26,3 +39,35 @@ export default class ScrollSuave {
     return this;
   }
 }
+// export default class ScrollSuave {
+//   constructor(links, options) {
+//     this.linksInternos = document.querySelectorAll(links);
+//     if (options === undefined) {
+//       this.options = { behavior: 'smooth', block: 'start' };
+//     } else {
+//       this.options = options;
+//     }
+
+//     this.scrollToSection = this.scrollToSection.bind(this);
+//   }
+
+//   scrollToSection(event) {
+//     event.preventDefault();
+//     const href = event.currentTarget.getAttribute('href');
+//     const section = document.querySelector(href);
+//     section.scrollIntoView(this.options);
+//   }
+
+//   addLinkEvent() {
+//     this.linksInternos.forEach((link) => {
+//       link.addEventListener('click', this.scrollToSection);
+//     });
+//   }
+
+//   init() {
+//     if (this.linksInternos.length) {
+//       this.addLinkEvent();
+//     }
+//     return this;
+//   }
+// }

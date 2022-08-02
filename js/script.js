@@ -22,24 +22,20 @@ const modal = new Modal(
 modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
+const dropDownMenu = new DropDownMenu("[data-dropdown]");
+dropDownMenu.init();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+const funcionamento = new Funcionamento("[data-semana]");
+funcionamento.init();
 // const scrollAnima = new ScrollAnima("[data-scroll]");
 // scrollAnima.init();
 scrollAnimado();
-
-const dropDownMenu = new DropDownMenu("[data-dropdown]");
-dropDownMenu.init();
-
-const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
-menuMobile.init();
-
-const funcionamento = new Funcionamento("[data-semana]");
-funcionamento.init();
 interactImages();
 fetchAnimais("./animaisapi.json", ".numeros-grid");
 fetchBitcoint("https://blockchain.info/ticker", ".btc-preco");
-
+// Slide Galery
 const slide = new SlideNav(".slide", ".wrapper");
 slide.init();
-
 slide.activePrevSlide();
 slide.addControl(".custom-controls");
