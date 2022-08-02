@@ -92,9 +92,8 @@ li {
   display: grid;
   grid-template-columns: minmax(120px, 300px) 1fr;
   grid-column: 3/-1;
-
   gap: 30px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 [data-semana]:after {
   content: "";
@@ -148,6 +147,7 @@ li {
   margin-bottom: 1rem;
   letter-spacing: 1;
 }
+
 .faq {
   grid-column: 3/-1;
   margin-bottom: 3rem;
@@ -203,6 +203,13 @@ li {
 .js [data-scroll="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+.btc-preco {
+  color: rgb(70, 11, 5);
+  font-family: "IBM Plex Mono", monospace;
+  background: green;
+  border-radius: 3px;
+  padding: 0 5px;
 }
 
 /* --------------------ANIMAÇÃO---------------------------- */
@@ -298,11 +305,4 @@ li {
   dd {
     margin-bottom: 18px;
   }
-}
-.btc-preco {
-  color: rgb(70, 11, 5);
-  font-family: "IBM Plex Mono", monospace;
-  background: green;
-  border-radius: 3px;
-  padding: 0 5px;
 }
